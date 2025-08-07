@@ -1,16 +1,14 @@
 ---
 permalink: /
-title: "Hi, there!"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
-
-Research interests
-------
 semantics and its interface with syntax and pragmatics, computational linguistics
 
+Hi there!
+------
 My name is Youngdong Cho [jʌŋdoŋ dʑo], a fourth-year PhD student in the Department of Linguistics at Cornell University, minoring in Cognitive Science.
 
 My primary research interests lie in theoretical syntax and its interface with semantics and pragmatics. One of  my ongoing projects examines the semantics and pragmatics of a non-canonical question across languages. I am also working on the argument structure of a Korean existential predicate, focusing on its locative and possessive constructions. My research interests also lie in experimental and computational approaches to these linguistic phenomena. I am currently working with Sarah Murray and  John Whitman.
