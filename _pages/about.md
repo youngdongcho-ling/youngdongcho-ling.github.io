@@ -8,9 +8,9 @@ redirect_from:
 
 semantics and its interface with syntax and pragmatics, computational linguistics
 
-Hi there!
+Hi there! 😎
 ------
-My name is Youngdong Cho [jʌŋdoŋ dʑo], a fourth-year PhD student in the Department of Linguistics at Cornell University, minoring in Cognitive Science.
+My name is <span style="color: #0xFFBA68C8;">Youngdong Cho</span> [jʌŋdoŋ dʑo], a fourth-year PhD student in the Department of Linguistics at Cornell University, minoring in Cognitive Science.
 
 My primary research interests lie in theoretical semantics and its interface with syntax and pragmatics. One of  my ongoing projects examines the semantics and pragmatics of non-canonical questions focusing on Korean. My research interests also lie in experimental and computational approaches to linguistic phenomena. I am currently working with Sarah Murray and  John Whitman.
 
