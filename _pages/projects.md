@@ -6,9 +6,9 @@ author_profile: true
 ---
 
 <span style="color: #BA68C8;">Encoding speaker's negative bias:The semantics and pragmatics of <i>wh</i>-polar questions</span>  
-- Investigates how and where the negative speaker attitude found in <i>wh</i>-polar questions is encoded in grammar, as exemplified by constructions like <i>Where is he a vegetarian?!</i> in Korean and Cantonese, which corresponds to <i>Since when is he a vegetarian?!</i> in English.
-- Examines the contextual conditions under which <i>wh</i>-polar questions receive a rhetorical interpretation.
-- Explores the relation between prosody and the degree of speaker bias.
+- investigates how and where the negative speaker attitude found in <i>wh</i>-polar questions is encoded in grammar, as exemplified by constructions like <i>Where is he a vegetarian?!</i> in Korean and Cantonese, which corresponds to <i>Since when is he a vegetarian?!</i> in English.
+- examines the contextual conditions under which <i>wh</i>-polar questions receive a rhetorical interpretation.
+- explores the relation between prosody and the degree of speaker bias.
 <br><br>
 
 <span style="color: #BA68C8;">The syntax of existential locatives and possessives in Korean and Japanese</span>  
