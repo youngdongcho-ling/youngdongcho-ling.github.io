@@ -25,8 +25,7 @@ author_profile: true
   <div style="min-width: 100px;">2023 Fall</div>
   <div>Teaching Assistant, LING 1101 Introduction to Linguistics</div>
 </div>
-<br>
-<div style="color: #BA68C8; font-style: italic; margin-bottom: 0;">At Seoul National University</div>
+<div style="color: #BA68C8; font-style: italic; margin-top: 1em; margin-bottom: 0;">At Seoul National University</div>
 <div style="display: flex; gap: 1em;">
   <div style="min-width: 100px;">2020 Fall</div>
   <div>Tutor, Tutoring Program at Center for Teaching and Learning Center</div>
