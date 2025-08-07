@@ -4,7 +4,7 @@ title: "Teaching"
 permalink: /teaching/
 author_profile: true
 ---
-<span style="color: #BA68C8; font-style: italic;">At Cornell University</span>
+<div style="color: #BA68C8; font-style: italic; margin-bottom: 0;">At Cornell University</div>
 <div style="display: flex; gap: 1em;">
   <div style="min-width: 100px;">2025 Fall</div>
   <div>Teaching Assistant, LING 1101 Introduction to Linguistics</div>
@@ -26,7 +26,7 @@ author_profile: true
   <div>Teaching Assistant, LING 1101 Introduction to Linguistics</div>
 </div>
 
-<span style="color: #BA68C8; font-style: italic;">At Seoul National University</span>
+<div style="color: #BA68C8; font-style: italic; margin-bottom: 0;">At Seoul National University</div>
 <div style="display: flex; gap: 1em;">
   <div style="min-width: 100px;">2020 Fall</div>
   <div>Tutor, Tutoring Program at Center for Teaching and Learning Center</div>
