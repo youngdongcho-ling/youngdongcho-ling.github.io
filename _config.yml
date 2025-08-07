@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Youngdong Cho"
+title                    : "λoungdong Cho"
 title_separator          : "-"
 name                     : &name "Youngdong Cho"
 description              : &description "personal description"
