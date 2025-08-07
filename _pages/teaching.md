@@ -5,7 +5,6 @@ permalink: /teaching/
 author_profile: true
 ---
 <p style="color: #BA68C8; font-style: italic;">At Cornell University</p>
-
 <div style="display: flex; gap: 1em;">
   <div style="min-width: 100px;">2025 Fall</div>
   <div>Teaching Assistant, LING 1101 Introduction to Linguistics</div>
@@ -26,10 +25,18 @@ author_profile: true
   <div style="min-width: 100px;">2023 Fall</div>
   <div>Teaching Assistant, LING 1101 Introduction to Linguistics</div>
 </div>
+<br><br>
 
-<span style="color: #BA68C8;"><em>At Seoul National University</em></span>  
-<pre style="font-family: monospace; font-size: 1em; margin-top: 0.5em;">
-2020 Fall    | Tutor, Tutoring Program at Center for Teaching and Learning Center
-2020 Spring  | Teaching Assistant, Graduate English Syntax
-2019 - 2021  | Teaching Assistant, College English Program
-</pre>
+<p style="color: #BA68C8; font-style: italic;">At Seoul National University</p>
+<div style="display: flex; gap: 1em;">
+  <div style="min-width: 100px;">2020 Fall</div>
+  <div>Tutor, Tutoring Program at Center for Teaching and Learning Center</div>
+</div>
+<div style="display: flex; gap: 1em;">
+  <div style="min-width: 100px;">2020 Spring</div>
+  <div>Teaching Assistant, Graduate English Syntax</div>
+</div>
+<div style="display: flex; gap: 1em;">
+  <div style="min-width: 100px;">2019 – 2021</div>
+  <div>Teaching Assistant, College English Program</div>
+</div>
