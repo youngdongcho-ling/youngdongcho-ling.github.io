@@ -22,7 +22,7 @@ repository               : "youngdongcho-ling.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.jpg"
+  avatar           : "profile.png"
   name             : "Youngdong Cho"
   pronouns         : # example: "she/her"  
   bio              : "I am a fourth-year PhD student in the Department of Linguistics at Cornell University, minoring in Cognitive Science."
