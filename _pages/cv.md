@@ -5,5 +5,4 @@ permalink: /cv/
 author_profile: true
 ---
 
-You can download my CV here:  [📄 Download CV (PDF)](/files/CV-ydc.pdf)
-
+You can download my CV here: <a href="/files/CV-ydc.pdf" target="_blank" rel="noopener noreferrer">📄 Download CV (PDF)</a>
