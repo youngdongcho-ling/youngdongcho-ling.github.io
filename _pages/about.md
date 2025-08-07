@@ -18,4 +18,4 @@ Prior to coming to Cornell, I received my M.A. in English Language and Literatur
 
 Contact
 ------
-yc2544@cornell.edu
+[yc2544@cornell.edu](mailto:yc2544@cornell.edu)
