@@ -5,6 +5,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
+
 semantics and its interface with syntax and pragmatics, computational linguistics
 
 Hi there!
