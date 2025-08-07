@@ -4,14 +4,28 @@ title: "Teaching"
 permalink: /teaching/
 author_profile: true
 ---
-<span style="color: #BA68C8;"><em>At Cornell University</em></span>  
-<pre style="font-family: monospace; font-size: 1em; margin-top: 0.5em;">
-2025 Fall    | Teaching Assistant, LING 1101 Introduction to Linguistics
-2025 Spring  | Teaching Assistant, KOREA 1102 Elementary Korean II
-2024 Fall    | Teaching Assistant, LING 3303 Introduction to Syntax and Semantics
-2024 Spring  | Teaching Assistant, LING 6424/4424 Computational Linguistics 1
-2023 Fall    | Teaching Assistant, LING 1101 Introduction to Linguistics
-</pre>
+<p style="color: #BA68C8; font-style: italic;">At Cornell University</p>
+
+<div style="display: flex; gap: 1em;">
+  <div style="min-width: 100px;">2025 Fall</div>
+  <div>Teaching Assistant, LING 1101 Introduction to Linguistics</div>
+</div>
+<div style="display: flex; gap: 1em;">
+  <div style="min-width: 100px;">2025 Spring</div>
+  <div>Teaching Assistant, KOREA 1102 Elementary Korean II</div>
+</div>
+<div style="display: flex; gap: 1em;">
+  <div style="min-width: 100px;">2024 Fall</div>
+  <div>Teaching Assistant, LING 3303 Introduction to Syntax and Semantics</div>
+</div>
+<div style="display: flex; gap: 1em;">
+  <div style="min-width: 100px;">2024 Spring</div>
+  <div>Teaching Assistant, LING 6424/4424 Computational Linguistics 1</div>
+</div>
+<div style="display: flex; gap: 1em;">
+  <div style="min-width: 100px;">2023 Fall</div>
+  <div>Teaching Assistant, LING 1101 Introduction to Linguistics</div>
+</div>
 
 <span style="color: #BA68C8;"><em>At Seoul National University</em></span>  
 <pre style="font-family: monospace; font-size: 1em; margin-top: 0.5em;">
