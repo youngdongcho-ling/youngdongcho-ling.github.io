@@ -1,5 +1,5 @@
 ---
-title: 'The syntax and semantics of fragments in English echo questions [Master's thesis]'
+title: "The syntax and semantics of fragments in English echo questions [Master's thesis]"
 date: 2021-08-30
 venue: 'Seoul National University'
 collection: publications
