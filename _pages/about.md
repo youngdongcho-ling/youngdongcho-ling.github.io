@@ -21,4 +21,4 @@ Prior to coming to Cornell, I received my M.A. in English Language and Literatur
 
 Contact
 ------
-📧: <a href="mailto:yc2544@cornell.edu">yc2544@cornell.edu</a>
+Please feel free to reach out! 📧: <a href="mailto:yc2544@cornell.edu">yc2544@cornell.edu</a>
