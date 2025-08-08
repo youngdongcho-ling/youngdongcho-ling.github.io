@@ -16,10 +16,10 @@
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
 
     <h2 class="archive__item-title" itemprop="headline">
-      {{ post.excerpt | markdownify | replace: '<p>', '' | replace: '</p>', '' }}
+      {{ post.title }}
     </h2>
 
-    <!-- Optional inline abstract toggle (like her commented-out block) -->
+    <!-- Optional inline abstract toggle -->
     {% if post.show_abstract %}
       <details><summary>Abstract</summary>
         <blockquote>{{ post.content | markdownify }}</blockquote>
@@ -36,3 +36,4 @@
 
   </article>
 </div>
+
