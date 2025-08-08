@@ -32,21 +32,39 @@ layout: default
       </h2>
     {% endif %}
 
-    {%- if page.collection == "publications" -%}
-      {%- assign author_last = site.author.last_name | default: site.author.name -%}
-      {%- assign author_init = site.author.first_initial -%}
-      {%- assign yr = page.date | default: "1900-01-01" | date: "%Y" -%}
-      {%- assign rendered_title = page.title | markdownify | replace: '<p>', '' | replace: '</p>', '' | strip -%}
-      
-    {%- capture auto_citation -%}
-    {{ author_last }}{% if author_init %}, {{ author_init }}.{% endif %} {{ yr }}.
-    {{ rendered_title }}. {% if post.venue %}<i>{{ post.venue }}</i>{% endif %}{% if post.volume %}, <i>{{ post.volume }}</i>{% endif %}{% if post.issue %}({{ post.issue }}){% endif %}{% if post.pages %}, {{ post.pages }}{% endif %}{% if post.note %}. [{{ post.note }}]{% endif %}.
-    {%- endcapture -%}
+{%- if page.collection == "publications" -%}
+  {%- assign author_last = site.author.last_name | default: site.author.name -%}
+  {%- assign author_init = site.author.first_initial -%}
+  {%- assign yr = page.date | default: "1900-01-01" | date: "%Y" -%}
 
-      <p class="pub-citation" style="margin-top:.5rem;">
-        {{ page.citation | default: auto_citation }}
-      </p>
-    {%- endif -%}
+  {%- assign rendered_title = page.title | markdownify | replace: '<p>', '' | replace: '</p>', '' | strip -%}
+
+  {%- comment -%} ensure the title ends with exactly one period {%- endcomment -%}
+  {%- assign last = rendered_title | slice: -1 -%}
+  {%- if last == '.' or last == '!' or last == '?' -%}
+    {%- assign title_with_period = rendered_title -%}
+  {%- else -%}
+    {%- assign title_with_period = rendered_title | append: '.' -%}
+  {%- endif -%}
+
+  {%- comment -%} build venue/volume/issue/pages/note tail (only print if non-empty) {%- endcomment -%}
+  {%- capture tail -%}
+  {% if page.venue %}<i>{{ page.venue }}</i>{% endif %}
+  {% if page.volume %}, <i>{{ page.volume }}</i>{% endif %}
+  {% if page.issue %}({{ page.issue }}){% endif %}
+  {% if page.pages %}, {{ page.pages }}{% endif %}
+  {% if page.note %}. [{{ page.note }}]{% endif %}
+  {%- endcapture -%}
+  {%- assign tail = tail | strip -%}
+
+  {%- capture auto_citation -%}
+{{ author_last }}{% if author_init %}, {{ author_init }}.{% endif %} {{ yr }}. {{ title_with_period }}{% if tail != '' %} {{ tail }}.{% endif %}
+  {%- endcapture -%}
+
+  <p class="pub-citation" style="margin-top:.5rem;">
+    {{ page.citation | default: auto_citation }}
+  </p>
+{%- endif -%}
 
     {% if page.read_time %}
       <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
