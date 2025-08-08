@@ -16,7 +16,8 @@
       {{ appear_label }}{{ post.citation | default: auto_citation }}
     </p>
 
-    <a href="{{ post.url | relative_url }}" class="btn--html">Details</a>
+    {% unless post.category == "conference_presentations" or post.categories contains "conference_presentations" %}<a href="{{ post.url | relative_url }}" class="btn--html">Details</a>
+    {% endunless %}
     {% if post.paperurl  %}<a href="{{ post.paperurl  }}" class="btn--html">PDF</a>{% endif %}
     {% if post.htmlurl   %}<a href="{{ post.htmlurl   }}" class="btn--html">HTML</a>{% endif %}
     {% if post.slidesurl %}<a href="{{ post.slidesurl }}" class="btn--html">Slides</a>{% endif %}
