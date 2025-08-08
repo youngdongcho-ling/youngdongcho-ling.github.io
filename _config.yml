@@ -83,7 +83,7 @@ publication_category:
   publications:      { title: "Publications" }
   manuscripts:       { title: "Manuscripts" }
   theses:            { title: "Theses" }
-  books:    { title: "Books" }
+  books:             { title: "Books" }
   conference_presentations:    { title: "Conference presentations" }
 
 
