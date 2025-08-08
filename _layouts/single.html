@@ -49,10 +49,10 @@ layout: default
 
   {%- comment -%} build venue/volume/issue/pages/note tail (only print if non-empty) {%- endcomment -%}
   {%- capture tail -%}
-  {% if page.venue %}<i>{{ page.venue }}</i>{% endif %}
-  {% if page.volume %}, <i>{{ page.volume }}</i>{% endif %}
-  {% if page.issue %}({{ page.issue }}){% endif %}
-  {% if page.pages %}, {{ page.pages }}{% endif %}
+  {% if page.venue %}<i>{{ page.venue }}</i>{% endif %},
+  {% if page.volume %}<i>{{ page.volume }}</i>{% endif %}
+  {% if page.issue %}({{ page.issue }}){% endif %},
+  {% if page.pages %}{{ page.pages }}{% endif %}
   {% if page.note %}. [{{ page.note }}]{% endif %}
   {%- endcapture -%}
   {%- assign tail = tail | strip -%}
