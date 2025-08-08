@@ -41,7 +41,16 @@
     "vendor/font-awesome/brands"
 ;
 
-// Custom overrides
-a.btn--html {
+// Button color scheme
+
+/* Details link */
+.archive__item a.btn--html[href*="Details"],
+.archive__item a.btn--html:first-of-type {
   color: #BA68C8 !important;
+}
+
+/* Slides and Poster links */
+.archive__item a.btn--html[href*="Slides"],
+.archive__item a.btn--html[href*="Poster"] {
+  color: #A8E4A0 !important;
 }
