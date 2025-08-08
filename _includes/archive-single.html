@@ -1,23 +1,31 @@
 {% include base_path %}
 
+{%- assign author_last = site.author.last_name | default: site.author.name -%}
+{%- assign author_init = site.author.first_initial -%}
+{%- assign yr = post.date | default: "1900-01-01" | date: "%Y" -%}
+{%- assign rendered_title = post.title | markdownify | replace: '<p>', '' | replace: '</p>', '' -%}
+
+{%- capture auto_citation -%}
+{{ author_last }}{% if author_init %}, {{ author_init }}.{% endif %} {{ yr }}.
+ {{ rendered_title }}{% if post.venue %}. <i>{{ post.venue }}</i>{% endif %}{% if post.note %}. [{{ post.note }}]{% endif %}.
+{%- endcapture -%}
+
+{%- assign is_future = post.date and post.date > site.time -%}
+{%- if post.status == 'to-appear' or is_future -%}
+  {%- assign appear_label = '<span class="pub-label">[to appear]</span> ' -%}
+{%- endif -%}
+
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-
-    <!-- Publication citation text -->
     <p class="pub-citation" itemprop="headline">
-      {{ post.title | markdownify | replace: '<p>', '' | replace: '</p>', '' }}
+      {{ appear_label }}{{ post.citation | default: auto_citation }}
     </p>
 
-    {% if post.show_abstract %}
-      <details><summary>Abstract</summary>
-        <blockquote>{{ post.content | markdownify }}</blockquote>
-      </details>
-    {% endif %}
-
-    <!-- Buttons -->
     <a href="{{ post.url | relative_url }}" class="btn">Details</a>
-    {% if post.paperurl   %}<a href="{{ post.paperurl   }}" class="btn--html">PDF</a>{% endif %}
-    {% if post.slidesurl  %}<a href="{{ post.slidesurl  }}" class="btn--html">Slides</a>{% endif %}
-    {% if post.posterurl  %}<a href="{{ post.posterurl  }}" class="btn--html">Poster</a>{% endif %}
+    {% if post.paperurl  %}<a href="{{ post.paperurl  }}" class="btn--html">PDF</a>{% endif %}
+    {% if post.htmlurl   %}<a href="{{ post.htmlurl   }}" class="btn--html">HTML</a>{% endif %}
+    {% if post.slidesurl %}<a href="{{ post.slidesurl }}" class="btn--html">Slides</a>{% endif %}
+    {% if post.posterurl %}<a href="{{ post.posterurl }}" class="btn--html">Poster</a>{% endif %}
+    {% if post.biburl    %}<a href="{{ post.biburl    }}" class="btn--html">Bib</a>{% endif %}
   </article>
 </div>

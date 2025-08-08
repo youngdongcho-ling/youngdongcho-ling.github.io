@@ -24,25 +24,53 @@ layout: default
     {% if page.modified %}<meta itemprop="dateModified" content="{{ page.modified | date: "%B %d, %Y" }}">{% endif %}
 
     <div class="page__inner-wrap">
-      {% unless page.header.overlay_color or page.header.overlay_image %}
-        <header>
-          {% if page.title %}<h1 class="page__title" itemprop="headline">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>{% endif %}
-          {% if page.read_time %}
-            <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
-          {% endif %}
-        {% if page.modified %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time></p>
-        {% endif %}
-        
-        {% if page.collection == 'teaching' %}
-          <p> {{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
-        {% elsif page.venue and page.date %}
-          <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }} </p>
-        {% elsif page.date %}
-          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
-        {% endif %}    
-        </header>
-      {% endunless %}
+{% unless page.header.overlay_color or page.header.overlay_image %}
+  <header>
+    {% if page.title %}
+      <h2 class="page__title" itemprop="headline">
+        {{ page.title | markdownify | replace: '<p>', '' | replace: '</p>', '' }}
+      </h2>
+    {% endif %}
+
+    {%- if page.collection == "publications" -%}
+      {%- assign author_last = site.author.last_name | default: site.author.name -%}
+      {%- assign author_init = site.author.first_initial -%}
+      {%- assign yr = page.date | default: "1900-01-01" | date: "%Y" -%}
+      {%- assign rendered_title = page.title | markdownify | replace: '<p>', '' | replace: '</p>', '' -%}
+      {%- capture auto_citation -%}
+      {{ author_last }}{% if author_init %}, {{ author_init }}.{% endif %} {{ yr }}.
+       {{ rendered_title }}{% if page.venue %}. <i>{{ page.venue }}</i>{% endif %}{% if page.note %}. [{{ page.note }}]{% endif %}.
+      {%- endcapture -%}
+      <p class="pub-citation" style="margin-top:.5rem;">
+        {{ page.citation | default: auto_citation }}
+      </p>
+    {%- endif -%}
+
+    {% if page.read_time %}
+      <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
+    {% endif %}
+
+    {% if page.modified %}
+      <p class="page__date">
+        <strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i>
+        {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong>
+        <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time>
+      </p>
+    {% endif %}
+
+    {# keep the venue/date block for non-publications only #}
+    {% if page.collection != 'publications' %}
+      {% if page.collection == 'teaching' %}
+        <p>{{ page.type }}, <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }}</p>
+      {% elsif page.venue and page.date %}
+        <p>Published in <i>{{ page.venue }}</i>, {{ page.date | default: "1900-01-01" | date: "%Y" }}</p>
+      {% elsif page.date %}
+        <p class="page__date"><strong><i class="fa fa-fw fa-calendar"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong>
+          <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
+      {% endif %}
+    {% endif %}
+  </header>
+{% endunless %}
 
       <section class="page__content" itemprop="text">
         {{ content }}

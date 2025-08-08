@@ -24,6 +24,8 @@ author:
   # Biographic information
   avatar           : "profile.png"
   name             : "Youngdong Cho"
+  last_name: "Cho"
+  first_initial: "Y"
   pronouns         : # example: "she/her"  
   bio              : "PhD student, Linguistics, Cornell University"
   location         : "Ithaca, NY"
