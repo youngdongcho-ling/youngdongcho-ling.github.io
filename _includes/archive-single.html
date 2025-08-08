@@ -1,39 +1,30 @@
 {% include base_path %}
 
-{% if post.header.teaser %}
-  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
-{% else %}
-  {% assign teaser = site.teaser %}
-{% endif %}
-
-{% if post.id %}
-  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
-{% else %}
-  {% assign title = post.title %}
-{% endif %}
-
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
 
+    <!-- Citation line (full formatted citation in the item's title) -->
     <h2 class="archive__item-title" itemprop="headline">
-      {{ post.title }}
+      {{ post.title | markdownify | replace: '<p>', '' | replace: '</p>', '' }}
     </h2>
 
-    <!-- Optional inline abstract toggle -->
+    {%- comment -%}
+    Optional inline abstract toggle on the list page.
+    Enable per item with: show_abstract: true
+    {%- endcomment -%}
     {% if post.show_abstract %}
       <details><summary>Abstract</summary>
         <blockquote>{{ post.content | markdownify }}</blockquote>
       </details>
     {% endif %}
 
+    <!-- Buttons -->
     <a href="{{ post.url | relative_url }}" class="btn">Details</a>
-    {% if post.paperurl %}
-      <a href="{{ post.paperurl }}" class="btn--html">PDF</a>
-    {% endif %}
-    {% if post.htmlurl %}
-      <a href="{{ post.htmlurl }}" class="btn--html">HTML</a>
-    {% endif %}
+    {% if post.paperurl   %}<a href="{{ post.paperurl   }}" class="btn--html">PDF</a>{% endif %}
+    {% if post.htmlurl    %}<a href="{{ post.htmlurl    }}" class="btn--html">HTML</a>{% endif %}
+    {% if post.slidesurl  %}<a href="{{ post.slidesurl  }}" class="btn--html">Slides</a>{% endif %}
+    {% if post.posterurl  %}<a href="{{ post.posterurl  }}" class="btn--html">Poster</a>{% endif %}
+    {% if post.biburl     %}<a href="{{ post.biburl     }}" class="btn--html">Bib</a>{% endif %}
 
   </article>
 </div>
-
