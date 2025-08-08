@@ -3,15 +3,11 @@
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
 
-    <!-- Citation line (full formatted citation in the item's title) -->
-    <h2 class="archive__item-title" itemprop="headline">
+    <!-- Publication citation text -->
+    <p class="pub-citation" itemprop="headline">
       {{ post.title | markdownify | replace: '<p>', '' | replace: '</p>', '' }}
-    </h2>
+    </p>
 
-    {%- comment -%}
-    Optional inline abstract toggle on the list page.
-    Enable per item with: show_abstract: true
-    {%- endcomment -%}
     {% if post.show_abstract %}
       <details><summary>Abstract</summary>
         <blockquote>{{ post.content | markdownify }}</blockquote>
