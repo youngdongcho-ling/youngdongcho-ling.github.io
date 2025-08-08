@@ -40,15 +40,3 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
-
-/* Remove underline by default, show underline (border) on hover */
-a {
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.15s ease;
-}
-
-a:hover {
-  text-decoration: none;
-  border-bottom-color: currentColor;
-}
