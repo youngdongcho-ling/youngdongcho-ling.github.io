@@ -17,10 +17,7 @@
     <!-- Buttons -->
     <a href="{{ post.url | relative_url }}" class="btn">Details</a>
     {% if post.paperurl   %}<a href="{{ post.paperurl   }}" class="btn--html">PDF</a>{% endif %}
-    {% if post.htmlurl    %}<a href="{{ post.htmlurl    }}" class="btn--html">HTML</a>{% endif %}
     {% if post.slidesurl  %}<a href="{{ post.slidesurl  }}" class="btn--html">Slides</a>{% endif %}
     {% if post.posterurl  %}<a href="{{ post.posterurl  }}" class="btn--html">Poster</a>{% endif %}
-    {% if post.biburl     %}<a href="{{ post.biburl     }}" class="btn--html">Bib</a>{% endif %}
-
   </article>
 </div>
