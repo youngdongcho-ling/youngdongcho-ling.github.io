@@ -1,12 +1,11 @@
 ---
-title: "I want to put 'Abstract' here, which appear right next to slides and paper hyperlink. When I click them, it should lead me to the abstract description as below (This is an abstract of my paper.)"
+title: "Encoding negative bias in *wh*-polar questions"
 collection: publications
-category: manuscripts
-permalink: /publication/2015-10-01-paper-title-number-3
-excerpt: 'Cho,Y (2025) Blahblahblahblahblah.'
-slidesurl: 'http://academicpages.github.io/files/slides3.pdf'
-paperurl: 'http://academicpages.github.io/files/paper3.pdf'
-
+category: manuscript
+date: 2025-03-15
+excerpt: "Cho, Y. 2025. “Encoding negative bias in *wh*-polar questions.” *Sinn und Bedeutung 30*."
+venue: "Sinn und Bedeutung (SuB) 30"
+paperurl: "/files/cho2025_sub30.pdf"   # shows a green PDF button
+# htmlurl: "https://doi.org/..."      # use this if you prefer an HTML button
 ---
-
-This is an abstract of my paper.
+This is the abstract of my paper.  <!-- This content appears on the Details page -->
