@@ -8,6 +8,7 @@ redirect_from:
 
 semantics and its interface with syntax and pragmatics, computational linguistics
 
+<div class="hover-underline-links">
 Hi there! 😎
 ------
 My name is <span style="color: #BA68C8;">Youngdong Cho</span> (pronounced as [jʌŋdoŋ dʑo]), a fourth-year PhD student in the <a href="https://linguistics.cornell.edu/" target="_blank" rel="noopener noreferrer">Department of Linguistics</a> at <a href="https://www.cornell.edu/" target="_blank" rel="noopener noreferrer">Cornell University</a>, minoring in <a href="https://as.cornell.edu/major_minor_gradfield/cognitive-science" target="_blank" rel="noopener noreferrer">Cognitive Science</a>.
@@ -18,4 +19,6 @@ Prior to coming to Cornell, I received my M.A. in English Language and Literatur
 
 Contact
 ------
-[yc2544@cornell.edu](mailto:yc2544@cornell.edu)
+📧: [yc2544@cornell.edu](mailto:yc2544@cornell.edu)
+
+</div>
