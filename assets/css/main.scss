@@ -42,13 +42,13 @@
 ;
 
 /* Remove underline by default, show underline (border) on hover */
-.page__content a {
+a {
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: border-color 0.15s ease;
 }
 
-.page__content a:hover {
+a:hover {
   text-decoration: none;
   border-bottom-color: currentColor;
 }
