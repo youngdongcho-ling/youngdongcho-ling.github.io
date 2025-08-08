@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 {% include base_path %}
 
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
@@ -32,42 +36,12 @@
       {%- assign author_last = site.author.last_name | default: site.author.name -%}
       {%- assign author_init = site.author.first_initial -%}
       {%- assign yr = page.date | default: "1900-01-01" | date: "%Y" -%}
-
-      {%- assign rendered_title = page.title
-          | markdownify
-          | replace: '<p>', ''
-          | replace: '</p>', ''
-          | strip -%}
-
-      {%- comment -%} ensure the title ends with a single period {%- endcomment -%}
-      {%- assign last = rendered_title | slice: -1 -%}
-      {%- if last == '.' or last == '!' or last == '?' -%}
-        {%- assign title_with_period = rendered_title -%}
-      {%- else -%}
-        {%- assign title_with_period = rendered_title | append: '.' -%}
-      {%- endif -%}
-
-      {%- comment -%} build the venue/volume/issue/pages tail (only add final period if tail exists) {%- endcomment -%}
-      {%- assign tail = '' -%}
-      {%- if page.venue -%}
-        {%- assign tail = tail | append: ' <i>' | append: page.venue | append: '</i>' -%}
-      {%- endif -%}
-      {%- if page.volume -%}
-        {%- assign tail = tail | append: ', <i>' | append: page.volume | append: '</i>' -%}
-      {%- endif -%}
-      {%- if page.issue -%}
-        {%- assign tail = tail | append: '(' | append: page.issue | append: ')' -%}
-      {%- endif -%}
-      {%- if page.pages -%}
-        {%- assign tail = tail | append: ', ' | append: page.pages -%}
-      {%- endif -%}
-      {%- if page.note -%}
-        {%- assign tail = tail | append: '. [' | append: page.note | append: ']' -%}
-      {%- endif -%}
-
-      {% capture auto_citation %}
-{{ author_last }}{% if author_init %}, {{ author_init }}.{% endif %} {{ yr }}. {{ title_with_period }}{% if tail != '' %}{{ tail }}.{% endif %}
-      {% endcapture %}
+      {%- assign rendered_title = page.title | markdownify | replace: '<p>', '' | replace: '</p>', '' | strip -%}
+      
+    {%- capture auto_citation -%}
+    {{ author_last }}{% if author_init %}, {{ author_init }}.{% endif %} {{ yr }}.
+    {{ rendered_title }}. {% if post.venue %}<i>{{ post.venue }}</i>{% endif %}{% if post.volume %}, <i>{{ post.volume }}</i>{% endif %}{% if post.issue %}({{ post.issue }}){% endif %}{% if post.pages %}, {{ post.pages }}{% endif %}{% if post.note %}. [{{ post.note }}]{% endif %}.
+    {%- endcapture -%}
 
       <p class="pub-citation" style="margin-top:.5rem;">
         {{ page.citation | default: auto_citation }}
@@ -101,10 +75,10 @@
 
       <section class="page__content" itemprop="text">
         {{ content }}
-
-        {# PDF only on details page #}
         {% if page.paperurl %}
-          <p style="font-size: smaller"><a href="{{ page.paperurl }}">PDF</a></p>
+            <p class="pub-actions">
+                <a class="btn--html" href="{{ page.paperurl }}">PDF</a>
+            </p>
         {% endif %}
 
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
@@ -125,7 +99,7 @@
     {% endif %}
   </article>
 
-  {% comment %} only show related on a post page when not disabled {% endcomment %}
+  {% comment %}<!-- only show related on a post page when not disabled -->{% endcomment %}
   {% if page.id and page.related and site.related_posts.size > 0 %}
     <div class="page__related">
       {% if site.data.ui-text[site.locale].related_label %}
