@@ -36,7 +36,7 @@ layout: default
       {%- assign author_last = site.author.last_name | default: site.author.name -%}
       {%- assign author_init = site.author.first_initial -%}
       {%- assign yr = page.date | default: "1900-01-01" | date: "%Y" -%}
-      {%- assign rendered_title = page.title | markdownify | replace: '<p>', '' | replace: '</p>', '' -%}
+      {%- assign rendered_title = page.title | markdownify | replace: '<p>', '' | replace: '</p>', '' | strip -%}
       {%- capture auto_citation -%}
       {{ author_last }}{% if author_init %}, {{ author_init }}.{% endif %} {{ yr }}.
        {{ rendered_title }}. {% if page.venue %}<i>{{ page.venue }}</i>{% endif %}{% if page.note %}. [{{ page.note }}]{% endif %}.
