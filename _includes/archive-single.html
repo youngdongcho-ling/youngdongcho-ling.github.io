@@ -7,13 +7,8 @@
 
 {%- capture auto_citation -%}
 {{ author_last }}{% if author_init %}, {{ author_init }}.{% endif %} {{ yr }}.
- {{ rendered_title }}{% if post.venue %}. <i>{{ post.venue }}</i>{% endif %}{% if post.note %}. [{{ post.note }}]{% endif %}.
+ {{ rendered_title }}. {% if post.venue %}<i>{{ post.venue }}</i>{% endif %}{% if post.note %}. [{{ post.note }}]{% endif %}.
 {%- endcapture -%}
-
-{%- assign is_future = post.date and post.date > site.time -%}
-{%- if post.status == 'to-appear' or is_future -%}
-  {%- assign appear_label = '<span class="pub-label">[to appear]</span> ' -%}
-{%- endif -%}
 
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">

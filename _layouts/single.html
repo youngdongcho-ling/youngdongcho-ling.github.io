@@ -39,7 +39,7 @@ layout: default
       {%- assign rendered_title = page.title | markdownify | replace: '<p>', '' | replace: '</p>', '' -%}
       {%- capture auto_citation -%}
       {{ author_last }}{% if author_init %}, {{ author_init }}.{% endif %} {{ yr }}.
-       {{ rendered_title }}{% if page.venue %}. <i>{{ page.venue }}</i>{% endif %}{% if page.note %}. [{{ page.note }}]{% endif %}.
+       {{ rendered_title }}. {% if page.venue %}<i>{{ page.venue }}</i>{% endif %}{% if page.note %}. [{{ page.note }}]{% endif %}.
       {%- endcapture -%}
       <p class="pub-citation" style="margin-top:.5rem;">
         {{ page.citation | default: auto_citation }}
