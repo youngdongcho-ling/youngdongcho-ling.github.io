@@ -1,5 +1,5 @@
 ---
-title: 'Linking Adverbials in Academic Writing on English Linguistics by Korean MA Students'
+title: 'Linking adverbials in academic writing on English linguistics by Korean MA students'
 date: 2020-09-01
 venue: 'English Studies'
 volume: 40
