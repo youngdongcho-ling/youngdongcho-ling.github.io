@@ -12,10 +12,10 @@
 
 <div class="list__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-    <p class="pub-citation" itemprop="headline">
+    <p class="pub-citation" itemprop="headline" style="margin-top:.5rem; margin-bottom:0;">
       {{ appear_label }}{{ post.citation | default: auto_citation }}
     </p>
-
+    
     {% unless post.category == "conference_presentations" or post.categories contains "conference_presentations" %}<a href="{{ post.url | relative_url }}" class="btn--html">Details</a>
     {% endunless %}
     {% if post.paperurl  %}<a href="{{ post.paperurl  }}" class="btn--html">PDF</a>{% endif %}
