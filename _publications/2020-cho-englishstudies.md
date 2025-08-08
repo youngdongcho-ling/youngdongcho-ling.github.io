@@ -2,6 +2,9 @@
 title: 'Linking Adverbials in Academic Writing on English Linguistics by Korean MA Students'
 date: 2020-09-01
 venue: 'English Studies'
+volume: 40
+# issue: 5
+pages: "193–219"
 collection: publications
 category: publications
 paperurl: /files/2020-cho-englishstudies.pdf
